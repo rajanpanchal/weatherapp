@@ -1,0 +1,24 @@
+<form>
+  <mat-form-field>
+    <input
+      type="text"
+      placeholder="Zip Code"
+      aria-label="Zipcode"
+      matInput
+      [formControl]="searchControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      (optionSelected)="onCitySelected($event)"
+    >
+      <mat-option
+        *ngFor="let option of (filteredOptions$ | async)?.list"
+        [value]="option"
+      >
+        {{ option.name }}, {{ option?.sys?.country }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

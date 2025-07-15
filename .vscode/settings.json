@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "files.autoSave": "onFocusChange",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

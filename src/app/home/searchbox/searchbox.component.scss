@@ -1,0 +1,43 @@
+
+.addlocation{
+
+  text-align: right;
+  float: right;
+  display: flex;
+  }
+  .resize{
+    flex-grow: 0;
+  flex-basis: 300px;
+  }
+
+  .citylist {
+    display: block;
+  }
+
+  .search {
+    z-index: 1000;
+    cursor: pointer;
+    margin-left: -200px;
+    padding: 10px;
+    background-color: #f5f5f5;
+      font-family: sans-serif;
+      opacity: 0.98;
+  }
+
+  .search-result {
+    padding: 4px;
+    font-size: 15px;
+  }
+
+  .search-result:hover {
+      background: #707070;
+      color: #fff;
+      font-size: 17px;
+  }
+
+  .label {
+    font-size: 20px;
+    color: #707070;
+  }
+
+

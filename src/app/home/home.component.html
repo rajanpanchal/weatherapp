@@ -1,0 +1,12 @@
+<mwa-searchbox (citySelected)="onCitySelected($event)"></mwa-searchbox>
+<mwa-temptoggle></mwa-temptoggle>
+
+<div class="row">
+  <div *ngFor="let cityWeather of cityWeather$ | async" class="col-md-3 mt-4">
+    <mwa-weather-summary
+      (newItemEvent)="deleteWeatherCard($event)"
+      [weather]="cityWeather"
+      [tempUnit]="temperatureUnit$ | async"
+    ></mwa-weather-summary>
+  </div>
+</div>

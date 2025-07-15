@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-header>
+    <img
+      mat-card-avatar
+      width="10"
+      height="10"
+      [ngSrc]="weather.weather[0].icon"
+    />
+
+    <mat-card-title>{{ weather.name }}</mat-card-title>
+
+    <mat-card-subtitle>
+      {{
+        weather.main.temp
+          | temperature
+            : units.FARENHIET
+            : (tempUnit === "metric" ? units.CELCIUS : units.FARENHIET)
+      }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      {{ weather.weather[0].description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-button
+      [routerLink]="['/city', weather.id]"
+      queryParamsHandling="preserve"
+    >
+      DETAILS
+    </button>
+    <button mat-button (click)="delete(this.weather.id)">DELETE</button>
+  </mat-card-actions>
+</mat-card>
